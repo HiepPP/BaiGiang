@@ -1,0 +1,25 @@
+﻿@model BaiGiang.Models.Mon
+@{
+    ViewBag.Title = "ChiTietSuaMon";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">Sửa môn</h3>
+        <label for="exampleInputEmail1"> @ViewBag.Mess</label>
+        <div class="box-body">
+            <div class="form-group">
+                @using (Html.BeginForm("ChiTietSuaMon", "Admin", FormMethod.Post))
+                {  <label for="exampleInputEmail1">Tên Môn</label>
+                    @Html.TextBoxFor(x => x.TenMon, htmlAttributes: new { @class = "form-control", @placeholder = "Nhập tên môn" })
+                    <div class="box-footer">
+                        <button class="btn btn-block btn-primary btn-lg">Sửa môn</button>
+                    </div>
+                }
+                @Html.ActionLink("Back", "SuaMon","Admin")
+            </div>
+        </div>
+    </div>
+</div>

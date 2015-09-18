@@ -1,0 +1,115 @@
+﻿@using PagedList.Mvc
+@using BaiGiang.Models
+@model PagedList.PagedList<Sach>
+@*@model PagedList.PagedList<BaiGiang.Models.Sach>*@ 
+    @{
+        ViewBag.Title = "Sort";
+        Layout = "~/Views/Shared/Layout.cshtml";
+    }
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class=" col-md-12">
+                    <div class="row">
+                        <div class=" col-md-12  col-xs-12  col-sm-14  cate_book">
+                            <h2><a href="#">Giáo trình mới nhất</a></h2>
+                            <p>Giáo trình giảng day dành cho giáo viên, thực tập viên bộ môn mới nhất.</p>
+
+                        </div>
+                        @{int i = 0;}
+                        @foreach (var item in Model)
+                        {
+                            i++;
+                            <div class=" col-md-2  col-xs-6  col-sm-4  item-book">
+                                <div class="thumbnail">
+
+                                    <a href=@Url.Action("Detail", "Home", new {id = item.Id })>
+                                        <img src="@Url.Content("~/BookContent/BookImg/" + item.Img) " height="181" width="259" />
+                                    </a>
+
+                                    <h4>
+                                        <a href=@Url.Action("Detail", "Home", new {id = item.Id })>
+                                            @item.TenSach
+                                        </a>
+                                    </h4>
+                                    <div class="ratings">
+                                        <p class="pull-right"><i class="glyphicon glyphicon-user"></i> @item.LuotXem</p>
+                                        <p>
+                                            @if (item.Rating == 1)
+                                            {
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+
+                                            }
+                                            @if (item.Rating == 2)
+                                            {
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                            }
+                                            @if (item.Rating == 3)
+                                            {
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                            }
+                                            @if (item.Rating == 4)
+                                            {
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                            }
+                                            @if (item.Rating == 5)
+                                            {
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                                <span class="glyphicon glyphicon-star"></span>
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            if (i % 6 == 0)
+                            {
+                                <div style="clear:both"></div>
+                            }
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        @Html.PagedListPager(Model, page => Url.Action("Sort", new { page, loai = ViewBag.type }))
+        Hiển thị sách từ @Model.FirstItemOnPage đến @Model.LastItemOnPage trong @Model.TotalItemCount sách
+    </div>
+</div>
+
+ @*<!-- waypoints -->
+<script src="~/Content/js/jquery.waypoints.min.js"></script>
+ <!-- infinite -->
+<script src="~/Content/js/infinite.min.js"></script>
+
+<script type="text/javascript">
+    $('.cate_book').waypoint(function () {
+        alert('You have scrolled to my waypoint.');
+    }, {
+        offset: '100%'
+    });
+</script>*@

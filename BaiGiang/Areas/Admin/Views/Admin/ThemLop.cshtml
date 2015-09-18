@@ -1,0 +1,25 @@
+﻿@model BaiGiang.Models.Lop
+@{
+    ViewBag.Title = "ThemLop";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">Thêm mới lớp</h3>
+        <label for="exampleInputEmail1"> @ViewBag.Mess</label>
+        <div class="box-body">
+            <div class="form-group">
+                @using (Html.BeginForm("Themlop", "Admin", FormMethod.Post))
+                {  <label for="exampleInputEmail1">Tên Môn</label>
+                    @Html.TextBoxFor(x => x.TenLop, htmlAttributes: new { @class = "form-control", @placeholder = "Nhập tên lớp" })
+                    <div class="box-footer">
+                        <button class="btn btn-block btn-primary btn-lg">Thêm mới lớp</button>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>

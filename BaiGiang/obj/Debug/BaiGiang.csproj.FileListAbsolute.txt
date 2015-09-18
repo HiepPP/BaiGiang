@@ -1,0 +1,63 @@
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\BaiGiang.dll.config
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\BaiGiang.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\BaiGiang.pdb
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\Antlr3.Runtime.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\EntityFramework.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\Microsoft.Web.Infrastructure.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\Newtonsoft.Json.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.Mvc.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.Optimization.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.Providers.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.Razor.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.WebPages.Deployment.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.WebPages.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.WebPages.Razor.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\WebGrease.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\EntityFramework.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\Newtonsoft.Json.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.Mvc.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.Razor.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.WebPages.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.WebPages.Deployment.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\bin\System.Web.WebPages.Razor.xml
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\obj\Debug\BaiGiang.csprojResolveAssemblyReference.cache
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\obj\Debug\BaiGiang.dll
+E:\Green House\ProjectBaiGiang\BaiGiang\BaiGiang\obj\Debug\BaiGiang.pdb
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\BaiGiang.dll.config
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\BaiGiang.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\BaiGiang.pdb
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Antlr3.Runtime.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\EntityFramework.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Microsoft.Web.Infrastructure.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Newtonsoft.Json.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.Mvc.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.Optimization.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.Providers.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.Razor.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.WebPages.Deployment.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.WebPages.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.WebPages.Razor.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\WebGrease.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\EntityFramework.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Newtonsoft.Json.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.Mvc.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.Razor.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.WebPages.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.WebPages.Deployment.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\System.Web.WebPages.Razor.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\obj\Debug\BaiGiang.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\obj\Debug\BaiGiang.pdb
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\PagedList.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\PagedList.Mvc.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\PagedList.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\PagedList.Mvc.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\obj\Debug\BaiGiang.csprojResolveAssemblyReference.cache
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\WebMatrix.Data.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\WebMatrix.WebData.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\WebMatrix.Data.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\WebMatrix.WebData.xml
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Microsoft.Web.Helpers.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Recaptcha.dll
+E:\Green House\ProjectBaiGiang - Copy\BaiGiang\BaiGiang\bin\Recaptcha.pdb

@@ -1,0 +1,62 @@
+﻿@model BaiGiang.Models.Sach
+@{
+    ViewBag.Title = "SuaSach";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+<script src="/Content/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: "#mytextarea"
+    });
+</script>
+<div class="box box-primary">
+    <div class="box-header with-border">
+        @ViewBag.Mess
+        <h3 class="box-title">Thêm mới sách</h3>
+    </div>
+    @using (Html.BeginForm("SuaSach", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    { <div class="box-body">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tên Sách</label>
+            @Html.TextBoxFor(x => x.TenSach, htmlAttributes: new { @class = "form-control", @id = "exampleInputEmail1", @placeholder = "Nhập tên sách" })
+        </div>
+        <div class="form-group">
+            <label>Chọn Môn</label>
+            @Html.DropDownListFor(x => x.IdMon, ViewBag.HienThiMon as SelectList, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Chọn Lớp</label>
+            @Html.DropDownListFor(x => x.IdLop, ViewBag.HienThiLop as SelectList, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Chọn Loại Sách</label>
+            @Html.DropDownListFor(x => x.IdLoaiSach, ViewBag.HienThiLoai as SelectList, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">Chọn hình ảnh</label>
+            <input type="file" name="imgUpload" value="">
+            <img src=@Url.Content("/BookContent/BookImg/"+ @Model.Img) style="width:50px; height:50px;">
+            <p class="help-block">@ViewBag.Mess</p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">Chọn File</label>
+            <input type="file" name="fileUpload" value="@Model.BookFile">
+            @Html.DisplayTextFor(x=>x.BookFile)
+            <p class="help-block">@ViewBag.Mess</p>
+        </div>
+        @Model.Img
+        @Html.HiddenFor(x=>x.NgayDang)
+        @Html.HiddenFor(x=>x.Rating)
+        @Html.HiddenFor(x=>x.LuotXem)
+        @if (Request.IsAuthenticated)
+        {
+            @Html.HiddenFor(x=>x.IdUser) 
+        }
+        @Html.TextAreaFor(x => x.GioiThieu, new { @id = "mytextarea" })
+        <div class="box-footer">
+            <button class="btn btn-block btn-primary btn-lg">Sửa sách</button>
+        </div>
+    </div>
+    }
+</div>

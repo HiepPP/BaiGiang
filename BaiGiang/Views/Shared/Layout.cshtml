@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Chia sẻ bài giảng</title>
+
+
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="/Content/css/shop-homepage.css" rel="stylesheet" />
+    @*@Styles.Render("~/Index/ssc")*@
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="header" class="navbar navbar-inverse " role="navigation">
+        <div class="container headpading">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=@Url.Action("Index","Home")><img src="/images/Logo.png" class="img-responsive" /></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="navbar-form navbar-left ">
+                   @Html.Action("TimKiemPar", "Search")
+                    <div class="clearfix"></div>
+                    <ul class="nav pull-right">
+                        <li class="dropdown" id="menuLogin">
+                            <a class="search_view" href="#" data-toggle="dropdown" id="navLogin">Tìm kiếm nhanh</a>
+                            <div class="dropdown-menu search_menus">
+                                <form class="form " id="formLogin">
+                                    <h5 class="title_detail">Tìm kiếm lựa chọn bài giảng</h5>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-6  well">
+                                        <p>Phòng giáo dục</p>
+                                        <select class="input_class">
+                                            <option>--Tìm theo Sở--</option>
+                                            <option>Quận 1</option>
+                                            <option>Quận 2</option>
+                                            <option>Quận 3</option>
+                                            <option>Quận 4</option>
+                                            <option>Quận 5</option>
+                                            <option>Quận 6</option>
+                                            <option>Quận 7</option>
+                                            <option>Quận 8</option>
+                                            <option>Quận 9</option>
+                                            <option>Quận 10</option>
+                                            <option>Quận 11</option>
+                                            <option>Quận 12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6  well">
+                                        <p>Trường THPT</p>
+                                        <input class="input_class" name="school"  id="username" type="text" placeholder="Tên trường">
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-6  well">
+                                        <p>Tìm theo khối</p>
+                                        <select class="input_class">
+                                            <option>--Tìm theo Khối--</option>
+                                            <option>Khối 1</option>
+                                            <option>Khối 2</option>
+                                            <option>Khối 3</option>
+                                            <option>Khối 4</option>
+                                            <option>Khối 5</option>
+                                            <option>Khối 6</option>
+                                            <option>Khối 7</option>
+                                            <option>Khối 8</option>
+                                            <option>Khối 9</option>
+                                            <option>Khối 10</option>
+                                            <option>Khối 11</option>
+                                            <option>Khối 12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6  well">
+                                        <p>Tìm theo môn học</p>
+                                        <select class="input_class">
+                                            <option>--Tìm theo Môn--</option>
+                                            <option>Môn Toán</option>
+                                            <option>Môn Lý</option>
+                                            <option>Môn Hóa</option>
+                                            <option>Môn Toán</option>
+                                            <option>Môn Văn</option>
+                                            <option>Môn Sử</option>
+                                            <option>Môn Địa</option>
+                                            <option>Môn Anh Văn</option>
+                                        </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-6  well">
+                                        <p>Trường THCS</p>
+                                        <input class="input_class" name="school" id="username" type="text" placeholder="Tên trường">
+                                    </div>
+                                    <div class="col-md-6  well">
+                                        <p>Tên tác giả</p>
+                                        <input class="input_class" name="school" id="username" type="text" placeholder="Tên tác giả">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <button style="float:right;" type="button" id="btnLogin" class="btn btn-info ">Tìm kiếm</button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="nav navbar-nav login">
+                    <li>
+                        <a href="#">Đăng ký</a>
+                    </li>
+                    <li>
+                        @*@Html.ActionLink("Đăng nhập", "Login", "Login", new { area = "Admin"}, null)*@
+                        @Html.ActionLink("Đăng nhập", "DangNhap", "Admin", new { area = "Admin"}, null)
+                    </li>
+                    <li>
+                        <a class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href=""><i class="glyphicon glyphicon-th"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right menu_express ">
+                            <ul class=" menu_subexpress">
+                                <li>
+                                    <a href="#">
+                                        <i style="color:#fff;background:#e3c800" class="glyphicon glyphicon-credit-card"></i>
+                                        <span>Học phí</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <i style="color:#fff;background:#a4c400" class="glyphicon glyphicon-book"></i>
+                                        <span>Sách điện tử</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i style="color:#fff;background:#81003c" class="glyphicon glyphicon-credit-card"></i>
+                                        <span>Sách tham khảo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <i style="color:#fff;background:#fa6800" class="glyphicon glyphicon-book"></i>
+                                        <span>Bài giảng</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i style="color:#fff;background:#004050" class="glyphicon glyphicon-film"></i>
+                                        <span>Phim online</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <i style="color:#fff;background:#ff2d19" class="glyphicon glyphicon-qrcode"></i>
+                                        <span>Giải trí giáo dục</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i style="color:#fff;background:#6d8764" class="glyphicon glyphicon-credit-card"></i>
+                                        <span>Học bạ online</span>
+                                    </a>
+                                </li>
+                                <li>
+
+                                    <a>
+                                        <i style="color:#fff;background:#1ba1e2" class="glyphicon glyphicon-book"></i>
+                                        <span>Y bạ điện tử</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu_sbexpress2">
+                                <li><a href="#">Cổng học bổng và du học</a></li>
+                                <li><a href="#">Cổng học ngoại ngữ trực tuyến</a></li>
+                                <li><a href="#">Cổng học ngoại ngữ trực tuyến</a></li>
+                                <li><a href="#">Cổng bài thi tin học</a></li>
+                                <li><a href="#">Cổng Thư viện điện tử</a></li>
+                                <li><a href="#">Cổng Bản tin trường</a></li>
+                                <li><a href="#">Cổng thông tin Hướng nghiệp</a></li>
+                                <li><a href="#">Kỹ năng sống - Soft Skills</a></li>
+                                <li><a href="#">Cổng tương tác bài học</a></li>
+                                <li><a href="#">Cổng mượn sách</a></li>
+                                <li><a href="#">Ngân hàng đề thi</a></li>
+                                <li><a href="#">Kỹ năng du học</a></li>
+                            </ul>
+
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <div class="bacgroundhead2">
+            <div class="container">
+                <div class="icon_menus">
+                    <a id="search_men" data-toggle="dropdown" href="search_menus2"><i class="glyphicon glyphicon-th-list"></i></a>
+                    <div class="dropdown-menu search_menus2">
+                        <h5 class="title_detail">Bài giảng giáo viên</h5>
+                        <div class="clearfix"></div>
+                        <div class="col-md-4  well">
+                            <p class="title_cate">Trường THPT</p>
+                            <ul class="class_school">
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "12"} )>Lớp 12</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "11"} )>Lớp 11</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "10"} )>Lớp 10</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4  well">
+                            <p class="title_cate">Trường THCS</p>
+                            <ul class="class_school">
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "9"} )>Lớp 9</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "8"} )>Lớp 8</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "7"} )>Lớp 7</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "6"} )>Lớp 6</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4  well">
+                            <p class="title_cate">Tiểu học</p>
+                            <ul class="class_school">
+
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "5"} )>Lớp 5</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "4"} )>Lớp 4</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "3"} )>Lớp 3</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "2"} )>Lớp 2</a></li>
+                                <li><a href=@Url.Action("TheoLop", "Home", new { idlop = "1"} )>Lớp 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="/">Bài giảng giáo viên</a></li>
+                    <li role="presentation"><a href="/">Sách tham khảo</a></li>
+                    <div class="btn-group setings">
+                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Sắp xếp <i class="glyphicon glyphicon-sort-by-alphabet"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right menu_sbexpress2">
+                            <li><a href=@Url.Action("Sort", "Home", new { loai = "newest"})>Mới nhất</a></li>
+                            <li><a href=@Url.Action("Sort", "Home", new { loai = "like" })>Hay nhất</a></li>
+                            <li><a href=@Url.Action("Sort", "Home", new { loai = "view" })>Xem nhiều nhất</a></li>
+
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    @RenderBody()
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Địa chỉ: 159 Ter Nam Kỳ Khởi Nghĩa, Phường 07, Quận 03, Tp.HCM</p>
+                    <p>
+                        Điện thoại: (08) 3930 2323
+                        <span>|</span>
+                        Fax: (08) 3930 1828
+                    </p>
+                    <p>
+                        <a href="#">www.thessc.vn</a>
+                        - Email: ssc@thessc.vn
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="/Content/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Content/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+﻿@model BaiGiang.Models.Sach
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+    <div class="TagMenu">
+        <div class="breadkum" id="ContentPlaceHolder1_quicktool"><a href="@Url.Action("TheoLop", "Home", new {idlop = "1" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 1</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "2" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 2</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "3" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 3</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "4" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 4</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "5" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 5</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "6" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 6</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "7" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 7</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "8" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 8</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "8" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 9</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "10" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 10</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "11" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 11</a><a href="@Url.Action("TheoLop", "Home", new {idlop = "12" })" class="button bg-cyan fg-white"><i class="glyphicon glyphicon-refresh on-left"></i>Khối 12</a></div>
+    </div>
+    <div class="row">
+        <div class=" col-md-12">
+
+
+            <div class=" col-md-12   col-sm-12  col-xs-12  ">
+                <div class="cate_book">
+                    <h2><a href="#">Tên sách: @Model.TenSach</a></h2>
+                    <p>Tên giáo viên: @Model.User.UserName</p>
+                    <p>Tên trường: @Model.User.Truong</p>
+                    <div class="ratings">
+                        <p> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></p>
+                        <p>Số lượt xem: @Model.LuotXem</p>
+                    </div>
+                    <div class="intro_detail">
+                        <h4>Giới thiệu</h4>
+                        <p> @Model.GioiThieu </p>
+                        <a href="#" class="title_detail" style="float:right;">Tải file</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-9  col-sm-8 col-xs-12  ">
+                <div class="view-pdf">
+                    <script type="text/javascript">
+                        window.onload = function () { var success = new PDFObject({  @Url.Content("/BookContent/BookFile/" + @Model.BookFile) }).embed("PDFViewer") };
+                    </script>
+                    <div id="PDFViewer">
+                        <object data=@Url.Content("/BookContent/BookFile/" + @Model.BookFile) type="application/pdf" width="100%" height="100%"></object>
+                    </div>
+                </div>
+            </div>
+
+
+
+            @Html.Action("SachMoi", "Home")
+            <div class="clearfix"></div>
+            <div class="col-md-12">
+                <h4 class="title_detail">Bài giảng liên quan</h4>
+            </div>
+            <div class="clearfix"></div>
+
+            @Html.Action("LienQuan", "Home", new { idmon = @Model.IdMon })
+            <script>
+                $('#myCarousel').carousel({
+                    interval: 10000
+                })
+
+                $('.carousel .item').each(function () {
+                    var next = $(this).next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
+
+                    if (next.next().length > 0) {
+                        next.next().children(':first-child').clone().appendTo($(this));
+                    }
+                    else {
+                        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</div>

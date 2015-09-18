@@ -1,0 +1,28 @@
+﻿@model BaiGiang.Models.LoaiSach
+    @{
+        ViewBag.Title = "ChiTietSuaLoai";
+        Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+    }
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Sửa môn</h3>
+            <label for="exampleInputEmail1"> @ViewBag.Mess</label>
+            <div class="box-body">
+                <div class="form-group">
+                    @using (Html.BeginForm("ChiTietSuaLoai", "Admin", FormMethod.Post))
+                    {
+                        <label for="exampleInputEmail1">Tên Loại</label>
+                        @Html.TextBoxFor(x=>x.TenLoai, htmlAttributes: new { @class = "form-control", @placeholder = "Nhập tên loại" })
+                        <label for="exampleInputEmail1">Chi tiết</label>
+                        @Html.TextBoxFor(x => x.ChiTiet, htmlAttributes: new { @class = "form-control", @placeholder = "Nhập chi tiết" })
+                        <div class="box-footer">
+                            <button class="btn btn-block btn-primary btn-lg">Sửa loại</button>
+                        </div>
+                    }
+                    @Html.ActionLink("Back", "SuaLoaiSach", "Admin")
+                </div>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BaiGiang.Models.Sach>
+<div class="col-md-3  col-sm-4 col-xs-12">
+    <h5 class="title_detail">Bài giảng mới nhất</h5>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-12 col-sm-12  col-xs-12 item-book">
+            <div class="thumbnail">
+
+                <a href=@Url.Action("Detail", "Home", new {id = item.Id})><img src="@Url.Content("~/BookContent/BookImg/" + item.Img) " /></a>
+                <h4><a href=@Url.Action("Detail", "Home", new {id = item.Id})>@item.TenSach</a></h4>
+                <div class="ratings">
+                    <p class="pull-right"><i class="glyphicon glyphicon-user"></i>@item.LuotXem</p>
+                    <p>
+                        @if (item.Rating == 1)
+                        {
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+
+                        }
+                        @if (item.Rating == 2)
+                        {
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        }
+                        @if (item.Rating == 3)
+                        {
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        }
+                        @if (item.Rating == 4)
+                        {
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        }
+                        @if (item.Rating == 5)
+                        {
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                        }
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    }
+
+
+</div>

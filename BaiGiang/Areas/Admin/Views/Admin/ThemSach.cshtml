@@ -1,0 +1,69 @@
+﻿@model BaiGiang.Models.Sach
+@{
+    ViewBag.Title = "ThemSach";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+@*<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>*@
+<script src="/Content/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: "#mytextarea"
+    });
+</script>
+<div class="box box-primary">
+    <div class="box-header with-border">
+        @ViewBag.Mess
+        <h3 class="box-title">Thêm mới sách</h3>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    @*<form role="form">*@
+    @using (Html.BeginForm("ThemSach", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    { <div class="box-body">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tên Sách</label>
+            @*<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên sách">*@
+            @Html.TextBoxFor(x => x.TenSach, htmlAttributes: new { @class = "form-control", @id = "exampleInputEmail1", @placeholder = "Nhập tên sách" })
+        </div>
+        <div class="form-group">
+            <label>Chọn Môn</label>
+            @*@Html.DropDownList("HienThiLop", "Chon")*@
+            @Html.DropDownListFor(x => x.IdMon, (IEnumerable<SelectListItem>)ViewBag.HienThiMon, new { @class = "form-control" })
+            @*@Html.DropDownList("accountid", new SelectList(ViewBag.Lop, "Id", "Lop"))*@
+        </div>
+        <div class="form-group">
+            <label>Chọn Lớp</label>
+            @Html.DropDownListFor(x => x.IdLop, ViewBag.HienThiLop as SelectList, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Chọn Loại Sách</label>
+            @Html.DropDownListFor(x => x.IdLoaiSach, ViewBag.HienThiLoai as SelectList, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">Chọn hình ảnh</label>
+            <input type="file" name="imgUpload">
+            <p class="help-block">@ViewBag.Mess</p>
+        </div><div class="form-group">
+            <label for="exampleInputFile">Chọn File</label>
+            <input type="file" name="fileUpload">
+            <p class="help-block">@ViewBag.Mess</p>
+        </div>
+        @*<div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>*@
+    </div><!-- /.box-body -->
+        <!-- tinymce-->
+
+        @*<textarea id="mytextarea"></textarea>*@
+        @Html.TextAreaFor(x => x.GioiThieu, new { @id = "mytextarea" })
+        @Html.HiddenFor(x => x.IdUser, new { id= User.Identity.Name})
+        <!-- end tinymce-->
+        <div class="box-footer">
+            <button class="btn btn-block btn-primary btn-lg">Thêm mới sách</button>
+        </div> }
+
+    @*</form>*@
+
+</div>
